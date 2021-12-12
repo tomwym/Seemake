@@ -6,15 +6,17 @@ Seemake
 ├── bin
 │   ├── SubMod1Shared.so
 │   └── SubMod2Static.a
+│   └── lib
+│       └── Seemake
 ├── include
 │   ├── CMakeLists.txt
-│   ├── Seemake.h
+│   ├── Seemake.hp
 │   ├── SubMod1Shared
-│   │   ├── Yuji.h
-│   │   └── Todo.h
+│   │   ├── Yuji.hpp
+│   │   └── Todo.hpp
 │   └── SubMod2Static
-│       ├── Maki.h
-│       └── Yuta.h
+│       ├── Maki.hpp
+│       └── Yuta.hpp
 ├── src
 │   └── CMakeLists.txt
 │   ├── Seemake.cpp
@@ -24,4 +26,12 @@ Seemake
 │   └── SubMod2Static
 │       ├── Maki.cpp
 │       └── Yuta.cpp
+```
+
+```
+$ cd into /Seemake dir
+$ cd build
+$ cmake ..
+$ cd ..
+$ cmake --build build
 ```

@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
 
-option(USE_MYMATH "use tutorial provided math implemenation" OFF)
-
 project(
     Seemake 
     VERSION 1.0 
