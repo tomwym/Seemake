@@ -1,5 +1,9 @@
-add_library(SubMod1Shared 
+set(BUILD_SHARED_LIBS ON)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/lib)
+SET(CMAKE_CXX_FLAGS_DEBUG "-O0")
+
+add_library(SubMod1Shared
             Yuji.cpp
             SubMod1More/AdditionalFile.cpp)
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(SubMod1Shared PUBLIC ${CMAKE_SOURCE_DIR}/include/SubMod1Shared)

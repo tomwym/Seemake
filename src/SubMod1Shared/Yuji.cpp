@@ -6,12 +6,12 @@
 namespace SubMod1Space {
 
 Yuji::Yuji()
-: name({"Yuji"})
+: name(std::string({"Yuji"})) {
     std::cout << name << " object construted!" << std::endl;
 }
 
 Yuji::Yuji(std::string text)
-: name({"Yuji"}) {
+: name(std::string({"Yuji"})) {
     std::cout << "Yuji object construted with " << text << std::endl;
 }
 

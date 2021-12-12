@@ -5,27 +5,32 @@
 
 namespace SubMod1Space {
 
-template<Typename T>
+template<typename T>
 class Todo {
 public:
     Todo();
-    Todo(T);
-private:
+    Todo(const T&);
     std::string name;
+    T getObj();
+protected:
     T obj;
 };
 
-template<Typename T>
+template<typename T>
 Todo<T>::Todo() 
-: name({"Todo"}) {
-    std::cout << name << " object constructed!" << std::endl;
+: name(std::string({"Todo"})), obj(0) {
+    std::cout << name << " object constructed with default ctor!" << std::endl;
 }
 
-template<Typename T> 
-Todo<T>::Todo(T _obj)
-: name({"Todo"}), obj(_obj) {
+template<typename T> 
+Todo<T>::Todo(const T& _obj)
+: name(std::string({"Todo"})), obj(_obj) {
     std::cout << name << " object constructed with alt ctor!" << std::endl;
 }
 
+template<typename T>
+T Todo<T>::getObj() {
+    return obj;
 }
 
+}
